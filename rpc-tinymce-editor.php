@@ -48,7 +48,7 @@ function rpc_tinymce_shortcodes_style( $css ) {
 	if ( !empty($enabled) ) {
 		if ( ! empty( $css ) )
 		$css .= ',';
-		$css .= plugins_url( 'admin/css/rpc_tinymce.css', __FILE__ );
+		$css .= plugins_url( 'admin/css/rpc-tinymce.css', __FILE__ );
 		return $css;
 	}
 
