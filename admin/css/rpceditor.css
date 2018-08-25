@@ -1,0 +1,45 @@
+.scode {
+	color: #A9A9A9;
+	font-family: 'Courier New', monospace;
+	font-size: 0.9em;
+	padding: 0 1px;
+}
+
+.scode.first,
+.scode.last {
+	border-style: dashed;
+	border-color: #A9A9A9;
+	padding: 0;
+}
+
+.scode.first {
+	border-width: 0 0 1px;
+	padding-bottom: 2px;
+}
+
+.scode.last {
+	border-width: 1px 0 0;
+	padding-top: 2px;
+}
+
+.dterm,
+.ddescription {
+	margin-left: 20px;
+}
+
+.dterm.edit,
+.ddescription.edit {
+	display: block;
+}
+
+.dterm {
+	margin-bottom: 0;
+}
+
+.ddescription {
+	margin-top: 0;
+}
+
+.edit {
+	color: initial;
+}

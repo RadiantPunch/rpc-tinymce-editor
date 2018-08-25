@@ -1,0 +1,65 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: RPC Customized Editor\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-11 22:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: admin/settings/register.php:17
+msgid "Block Formats"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Customizes the default TinyMCE editor to encourage best practices for "
+"creating web content."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://radiantpunch.com/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: admin/settings/register.php:24
+msgid "Inline Formats"
+msgstr ""
+
+#. Author of the plugin
+msgid "Radiant Punch Creative"
+msgstr ""
+
+#. Name of the plugin
+msgid "RPC Customized Editor"
+msgstr ""
+
+#: admin/menu.php:11 admin/menu.php:12
+msgid "RPC Editor Settings"
+msgstr ""
+
+#: admin/settings/callbacks.php:9
+msgid "Select block element options"
+msgstr ""
+
+#: admin/settings/callbacks.php:21
+msgid "Select editor tools"
+msgstr ""
+
+#: admin/settings/callbacks.php:15
+msgid "Select inline element options"
+msgstr ""
+
+#: admin/settings/register.php:31
+msgid "Tools"
+msgstr ""

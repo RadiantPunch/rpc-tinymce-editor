@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <title>progress</title>
+  <g>
+    <polygon points="8.43 7.27 10.82 9.67 16.29 4.21 17.08 5 17.08 2 14.08 2 14.88 2.79 10.82 6.84 8.43 4.44 2.92 9.95 4.33 11.36 8.43 7.27" style="fill: #565d66"/>
+    <path d="M12,12H2v6H18V12Zm5,5H12V13h5Z" style="fill: #565d66"/>
+  </g>
+</svg>
