@@ -1,12 +1,12 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined( "ABSPATH" ) ) {
 	exit;
 }
 
 function rpc_tinymce_check_settings($format) {
 	$value = false;
-	$options = get_option( 'rpc_tinymce_options', rpc_tinymce_default_options() );
+	$options = get_option( "rpc_tinymce_options", rpc_tinymce_default_options() );
 
 	if ( isset($options[$format]) && ! empty( $options[$format] ) ) {
 		$value = (bool) $options[$format];

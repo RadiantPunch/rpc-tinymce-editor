@@ -1,23 +1,23 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined( "ABSPATH" ) ) {
 	exit;
 }
 
 function rpc_tinymce_mce_buttons_2($buttons) {
 
 	$remove_defaults = array(
-		'strikethrough',
-		'hr',
-		'forecolor',
-		'outdent',
-		'indent',
-		'wp_help',
-		'pastetext',
-		'removeformat',
-		'charmap',
-		'undo',
-		'redo'
+		"strikethrough",
+		"hr",
+		"forecolor",
+		"outdent",
+		"indent",
+		"wp_help",
+		"pastetext",
+		"removeformat",
+		"charmap",
+		"undo",
+		"redo"
 	);
 	foreach ( $buttons as $button_key => $button_value ) {
 		if ( in_array( $button_value, $remove_defaults ) ) {
@@ -34,8 +34,8 @@ function rpc_tinymce_mce_buttons_2($buttons) {
 		}
 	}
 
-	if ( rpc_tinymce_check_settings( 'link' ) ) {
-		array_splice( $enabled_formats, 1, 0, array('unlink') );
+	if ( rpc_tinymce_check_settings( "link" ) ) {
+		array_splice( $enabled_formats, 1, 0, array("unlink") );
 	}
 
 	$buttons = array_merge( $buttons, $enabled_formats );

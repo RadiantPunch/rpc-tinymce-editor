@@ -1,23 +1,23 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined( "ABSPATH" ) ) {
 	exit;
 }
 
 function rpc_tinymce_mce_buttons_1($buttons) {
 
 	$remove_defaults = array(
-		'bold',
-		'italic',
-		'link',
-		'bullist',
-		'numlist',
-		'blockquote',
-		'alignleft',
-		'aligncenter',
-		'alignright',
-		'wp_more',
-		'wp_adv',
+		"bold",
+		"italic",
+		"link",
+		"bullist",
+		"numlist",
+		"blockquote",
+		"alignleft",
+		"aligncenter",
+		"alignright",
+		"wp_more",
+		"wp_adv",
 	);
 	foreach ( $buttons as $button_key => $button_value ) {
 		if ( in_array( $button_value, $remove_defaults ) ) {
@@ -37,8 +37,8 @@ function rpc_tinymce_mce_buttons_1($buttons) {
 		}
 	}
 
-	if ( rpc_tinymce_check_settings('undo-redo') ) {
-		array_push( $enabled_block_tools, 'undo', 'redo' );
+	if ( rpc_tinymce_check_settings("undo-redo") ) {
+		array_push( $enabled_block_tools, "undo", "redo" );
 	}
 
 	$buttons = array_merge( $buttons, $enabled_block_tools );
