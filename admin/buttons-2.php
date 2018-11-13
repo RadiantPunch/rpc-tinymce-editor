@@ -26,7 +26,15 @@ function rpc_tinymce_mce_buttons_2($buttons) {
 	}
 
 	$available_inline_formats = rpc_tinymce_available_inline_formats();
+	$available_classes = rpc_tinymce_available_classes();
 	$enabled_formats = array();
+
+	foreach ( $available_classes as $class ) {
+		if ( rpc_tinymce_check_settings( $class ) ) {
+			array_push( $enabled_formats, 'styleselect' );
+			break;
+		}
+	}
 
 	foreach ( $available_inline_formats as $format ) {
 		if ( rpc_tinymce_check_settings( $format ) ) {

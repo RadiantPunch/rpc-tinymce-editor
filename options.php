@@ -82,6 +82,26 @@ function rpc_tinymce_inline_labels() {
 	);
 }
 
+function rpc_tinymce_available_classes() {
+	return array(
+		"class-button",
+		"class-clear",
+		"class-2col",
+		"class-3col",
+		"class-4col"
+	);
+}
+
+function rpc_tinymce_class_labels() {
+	return array(
+		".button",
+		".clear",
+		".list-2-col",
+		".list-3-col",
+		".list-4-col"
+	);
+}
+
 function rpc_tinymce_available_tools() {
 	return array(
 		"pastetext",
@@ -108,6 +128,7 @@ function rpc_tinymce_requires_shortcode() {
 function rpc_tinymce_all_available_options() {
 	$block = rpc_tinymce_available_block_formats();
 	$inline = rpc_tinymce_available_inline_formats();
+	$classes = rpc_tinymce_available_classes();
 	$tools = rpc_tinymce_available_tools();
 	$all = array_merge( $block, $inline, $tools );
 	return $all;
