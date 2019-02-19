@@ -29,7 +29,7 @@ function rpc_tinymce_init_formats() {
 
 		foreach ( $custom_plugins as $plugin ) {
 			if ( rpc_tinymce_check_settings($plugin) ) {
-				$plugin_array[ "rpc_tinymce_" . $plugin ] = plugin_dir_url( __FILE__ ) . "plugins/" . $plugin . "/" . $plugin . ".js";
+				$plugin_array[ "rpc_tinymce_" . $plugin ] = plugin_dir_url( __FILE__ ) . "plugins/" . $plugin . ".js";
 			}
 		}
 
@@ -46,7 +46,7 @@ function rpc_tinymce_init_formats() {
 		}
 	
 		if ( !empty( $shortcode_enabled ) ) {
-			$plugin_array[ "scode-key-disable" ] = plugin_dir_url( __FILE__ ) . "plugins/scode-key-disable/scode-key-disable.js";
+			$plugin_array[ "scode-key-disable" ] = plugin_dir_url( __FILE__ ) . "plugins/scode-key-disable.js";
 			$plugin_array[ "noneditable" ] = plugin_dir_url( __FILE__ ) . "plugins/noneditable/plugin.min.js";
 		}
 

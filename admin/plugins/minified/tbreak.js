@@ -1,0 +1,1 @@
+jQuery,tinymce.PluginManager.add("rpc_tinymce_tbreak",function(t,e){t.addButton("tbreak",{title:"Thematic Break",image:e+"/tbreak.svg",onclick:function(){t.insertContent("<hr />")}})});
