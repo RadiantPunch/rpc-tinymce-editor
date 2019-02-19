@@ -31,7 +31,7 @@ if ( is_admin() ) {
 	add_action( "init", "rpc_tinymce_init_formats" );
 	add_action( "admin_enqueue_scripts", "rpc_tinymce_options_page_css" );
 	add_filter( "mce_css", "rpc_tinymce_shortcodes_style" );
-	add_action( "admin_init", "rpc_tinymce_acf_integration" );
+	add_action( "acf/init", "rpc_tinymce_acf_integration" );
 }
 
 add_action( "plugins_loaded", "rpc_tinymce_textdomain" );
@@ -69,32 +69,28 @@ function rpc_tinymce_options_page_css( $hook ) {
 }
 
 function rpc_tinymce_acf_integration() {
-	if ( is_plugin_active( "advanced-custom-fields/acf.php" ) ) {
-	
-		require_once plugin_dir_path( __FILE__ ) . "admin/settings/acf-settings.php";
+	require_once plugin_dir_path( __FILE__ ) . "admin/settings/acf-settings.php";
 
-		function rpc_tinymce_acf_form() {
-			do_action('acf/input/admin_head');
-	    	do_action('acf/input/admin_enqueue_scripts');
-	    	do_action('acf/input/admin_enqueue_styles');
-		}
-
-		function rpc_tinymce_add_acf_variables() {
-		    acf_form_head();
-		}
-
-		function rpc_tinymce_acf_style() {
-			$current_screen = get_current_screen();
-
-		    if ( strpos( $current_screen->base, "rpc-editor" ) ) {
-		        wp_register_style( "rpc_tinymce_acf", plugins_url( "admin/css/acf.css", __FILE__ ), false, "1.0" );
-		    	wp_enqueue_style( "rpc_tinymce_acf" );
-		    }
-		}
-
-		add_action( "acf/input/admin_enqueue_scripts", "rpc_tinymce_acf_style" );
-		add_action( "admin_init", "rpc_tinymce_add_acf_variables" );
+	function rpc_tinymce_acf_form() {
+		do_action("acf/input/admin_head");
+    	do_action("acf/input/admin_enqueue_scripts");
 	}
+
+	function rpc_tinymce_add_acf_variables() {
+	    acf_form_head();
+	}
+
+	function rpc_tinymce_acf_style() {
+		$current_screen = get_current_screen();
+
+	    if ( strpos( $current_screen->base, "rpc-editor" ) ) {
+	        wp_register_style( "rpc_tinymce_acf", plugins_url( "admin/css/acf.css", __FILE__ ), false, "1.0" );
+	    	wp_enqueue_style( "rpc_tinymce_acf" );
+	    }
+	}
+
+	add_action( "admin_init", "rpc_tinymce_add_acf_variables" );
+	add_action( "acf/input/admin_enqueue_scripts", "rpc_tinymce_acf_style" );
 }
 
 function rpc_tinymce_textdomain() {
