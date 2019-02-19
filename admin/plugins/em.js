@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('em', {
             title: 'Emphasis',
-            image: url + '/em.svg',
+            image: url + '/icons/em.svg',
             onclick: function() {
                 editor.execCommand('mceToggleFormat', false, 'em_format');
             },

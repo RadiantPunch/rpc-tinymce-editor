@@ -4,7 +4,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('tbreak', {
             title: 'Thematic Break',
-            image: url + '/tbreak.svg',
+            image: url + '/icons/tbreak.svg',
             onclick: function(){
                 editor.insertContent('<hr />');
             }

@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('abbr', {
             title: 'Abbreviation',
-            image: url + '/abbr.svg',
+            image: url + '/icons/abbr.svg',
             onclick: function() {
             	var node = $(editor.selection.getNode());
             	if (node.is('abbr')) {

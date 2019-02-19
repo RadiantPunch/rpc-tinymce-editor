@@ -5,7 +5,7 @@
     	// ----- BUTTON REGISTRATION -----
         editor.addButton('meter', {
             title: 'Meter',
-            image: url + '/meter.svg',
+            image: url + '/icons/meter.svg',
             cmd: 'meterCmd'
         });
 

@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('ins', {
             title: 'Insertion',
-            image: url + '/ins.svg',
+            image: url + '/icons/ins.svg',
             onclick: function() {
             	editor.execCommand('mceToggleFormat', false, 'ins_format');
             },

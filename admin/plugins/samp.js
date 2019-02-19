@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('samp', {
             title: 'Sample Output',
-            image: url + '/samp.svg',
+            image: url + '/icons/samp.svg',
             onclick: function() {
                 editor.execCommand('mceToggleFormat', false, 'samp_format');
             },

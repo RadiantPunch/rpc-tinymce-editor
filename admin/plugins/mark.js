@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('mark', {
             title: 'Mark',
-            image: url + '/mark.svg',
+            image: url + '/icons/mark.svg',
             onclick: function() {
             	editor.execCommand('mceToggleFormat', false, 'mark_format');
             },

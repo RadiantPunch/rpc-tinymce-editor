@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('kbd', {
             title: 'Keyboard Input',
-            image: url + '/kbd.svg',
+            image: url + '/icons/kbd.svg',
             onclick: function() {
             	editor.execCommand('mceToggleFormat', false, 'kbd_format');
             },

@@ -9,7 +9,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('strong', {
             title: 'Strong',
-            image: url + '/strong.svg',
+            image: url + '/icons/strong.svg',
             onclick: function() {
                 editor.execCommand('mceToggleFormat', false, 'strong_format');
             },

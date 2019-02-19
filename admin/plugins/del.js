@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('del', {
             title: 'Deletion',
-            image: url + '/del.svg',
+            image: url + '/icons/del.svg',
             onclick: function() {
             	editor.execCommand('mceToggleFormat', false, 'del_format');
             },

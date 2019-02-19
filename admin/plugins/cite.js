@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('cite', {
             title: 'Citation',
-            image: url + '/cite.svg',
+            image: url + '/icons/cite.svg',
             onclick: function() {
             	editor.execCommand('mceToggleFormat', false, 'cite_format');
             },

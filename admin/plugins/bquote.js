@@ -5,7 +5,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('bquote', {
             title: 'Blockquote',
-            image: url + '/bquote.svg',
+            image: url + '/icons/bquote.svg',
             cmd: 'bquoteCmd',
         });
   

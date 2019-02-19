@@ -5,7 +5,7 @@
         editor.addButton('dl', {
             title: 'Description List',
             type: 'splitbutton',
-            image: url + '/dl.svg',
+            image: url + '/icons/dl.svg',
             cmd: 'dlCmd',
             menu: [
                 {

@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('time', {
             title: 'Time',
-            image: url + '/time.svg',
+            image: url + '/icons/time.svg',
             onclick: function() {
                var node = $(editor.selection.getNode());
                if (node.is('time')) {

@@ -4,7 +4,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('progress', {
             title: 'Progress',
-            image: url + '/progress.svg',
+            image: url + '/icons/progress.svg',
             cmd: 'progressCmd',
         });
 

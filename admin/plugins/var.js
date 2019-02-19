@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('var', {
             title: 'Variable',
-            image: url + '/var.svg',
+            image: url + '/icons/var.svg',
             onclick: function() {
                editor.execCommand('mceToggleFormat', false, 'var_format');
             },

@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('dfn', {
             title: 'Definition',
-            image: url + '/dfn.svg',
+            image: url + '/icons/dfn.svg',
             onclick: function() {
             	editor.execCommand('mceToggleFormat', false, 'dfn_format');
             },

@@ -10,7 +10,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('q', {
             title: 'Inline Quotation',
-            image: url + '/q.svg',
+            image: url + '/icons/q.svg',
             onclick: function() {
                 editor.execCommand('mceToggleFormat', false, 'q_format');
             },

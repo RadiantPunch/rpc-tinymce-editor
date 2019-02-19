@@ -5,7 +5,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('details', {
             title: 'Details',
-            image: url + '/details.svg',
+            image: url + '/icons/details.svg',
             cmd: 'detailsCmd',
         });
   

@@ -4,7 +4,7 @@
         // ----- BUTTON REGISTRATION -----
         editor.addButton('br', {
             title: 'Line Break',
-            image: url + '/br.svg',
+            image: url + '/icons/br.svg',
             onclick: function(){
                 editor.selection.setContent('<br />');
             }
