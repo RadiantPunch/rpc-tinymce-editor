@@ -27,16 +27,16 @@ function rpc_tinymce_register_settings() {
 	);
 
 	add_settings_section( 
-		"rpc_tinymce_classes_section", 
-		esc_html__( "Classes", "rpc_tinymce" ),
-		"rpc_tinymce_classes_callback", 
+		"rpc_tinymce_tools_section", 
+		esc_html__( "Tools", "rpc_tinymce" ),
+		"rpc_tinymce_tools_callback", 
 		"rpc-editor"
 	);
 
 	add_settings_section( 
-		"rpc_tinymce_tools_section", 
-		esc_html__( "Tools", "rpc_tinymce" ),
-		"rpc_tinymce_tools_callback", 
+		"rpc_tinymce_classes_section", 
+		esc_html__( "Classes", "rpc_tinymce" ),
+		"rpc_tinymce_classes_callback", 
 		"rpc-editor"
 	);
 
@@ -44,10 +44,10 @@ function rpc_tinymce_register_settings() {
 	$block_labels = rpc_tinymce_block_labels();
 	$inline_options = rpc_tinymce_available_inline_formats();
 	$inline_labels = rpc_tinymce_inline_labels();
-	$class_options = rpc_tinymce_available_classes();
-	$class_labels = rpc_tinymce_class_labels();
 	$tool_options = rpc_tinymce_available_tools();
 	$tool_labels = rpc_tinymce_tool_labels();
+	$class_options = rpc_tinymce_available_classes();
+	$class_labels = rpc_tinymce_class_labels();
 
 	function rpc_tinymce_format_fields( $id, $label, $section_type ) {
 		add_settings_field(
@@ -68,12 +68,12 @@ function rpc_tinymce_register_settings() {
 		rpc_tinymce_format_fields( $option, $inline_labels[$index], "inline" );
 	}
 
-	foreach ( $class_options as $index => $option ) {
-		rpc_tinymce_format_fields( $option, $class_labels[$index], "classes" );
-	}
-
 	foreach ( $tool_options as $index => $option ) {
 		rpc_tinymce_format_fields( $option, $tool_labels[$index], "tools" );
+	}
+
+	foreach ( $class_options as $index => $option ) {
+		rpc_tinymce_format_fields( $option, $class_labels[$index], "classes" );
 	}
 
 }
