@@ -99,9 +99,6 @@
                     var requiredFieldsValid = false;
                     var optionalFieldsValid = false;
 
-                    var editOpen = '<span class="edit">';
-                    var editClose = '</span>';
-
                     var winManager = editor.windowManager;
 
                     function inputsFilled(input) {
@@ -147,9 +144,9 @@
                             maxInput = Number(maxInput);
                             valInput = Number(valInput);
                             if ( minInput < maxInput && ( valInput >= minInput && valInput < maxInput ) ) {
-                                min = ' min="' + editOpen + minInput + editClose + '"';
-                                max = ' max="' + editOpen + maxInput + editClose + '"';
-                                val = ' value="' + editOpen + valInput + editClose + '"';
+                                min = ' min="' + minInput + '"';
+                                max = ' max="' + maxInput + '"';
+                                val = ' value="' + valInput + '"';
                                 requiredFieldsValid = true;
                             } else {
                                 winManager.alert('Make sure your Meter Minimum is less than Meter Maximum and that the Measurement is between the two.');
@@ -195,7 +192,7 @@
                                     optInput = Number(optInput);
                                     if ( optInput >= minInput && optInput <= maxInput ) {
                                         optValid = true;
-                                        opt = ' optimum="' + editOpen + optInput + editClose + '"';
+                                        opt = ' optimum="' + optInput + '"';
                                     } else {
                                         winManager.alert('The Optimum must be between the Meter Minimum and Maximum');
                                         e.preventDefault();
@@ -209,18 +206,18 @@
                                     if ( lowInput < highInput ) {
                                         lowValid = true;
                                         highValid = true;
-                                        low = ' low="' + editOpen + lowInput + editClose + '"';
-                                        high = ' high="' + editOpen + highInput + editClose + '"';
+                                        low = ' low="' + lowInput + '"';
+                                        high = ' high="' + highInput + '"';
                                     } else {
                                         winManager.alert('The Low End must be less than the High End');
                                         e.preventDefault();
                                         return;
                                     }
                                 } else if ( highFilled === true ) {
-                                    high = ' high="' + editOpen + highInput + editClose + '"';
+                                    high = ' high="' + highInput + '"';
                                     highValid = true;
                                 } else if ( lowFilled === true ) {
-                                    low = ' low="' + editOpen + lowInput + editOpen + '"';
+                                    low = ' low="' + lowInput + '"';
                                     lowValid = true;
                                 } else {
                                     lowValid = true;
@@ -236,11 +233,9 @@
                             }
 
                             // Final output
-                            if ( requiredFieldsValid === true && optionalFieldsValid === true ) {
-                                var wrapStart = '<span class="no-edit">';
-                                var wrapEnd = '</span>';                   
+                            if ( requiredFieldsValid === true && optionalFieldsValid === true ) {                  
 
-                                var returnText = wrapStart + '<span class="scode no-return">[meter' + min + max + val + low + high + opt + ']</span><span class="edit">' + selectedText + '</span><span class="scode">[/meter]</span>' + wrapEnd;
+                                var returnText = '[meter' + min + max + val + low + high + opt + ']' + selectedText + '[/meter]';
                                 editor.insertContent(returnText);
 
                             }

@@ -10,21 +10,24 @@ add_shortcode("meter", "rpc_tinymce_meter_shortcode");
 // ----- RENDER SHORTCODES -----
 function rpc_tinymce_meter_shortcode($atts, $content, $tag){
 
-	extract(shortcode_atts(array(
-        "min" => "",
-        "max" => "",
-        "value" => "",
-        "low" => "",
-        "high" => "",
-        "optimum" => "",
-    ), $atts));
+	$args = shortcode_atts(
+		array(
+			"min" => "",
+			"max" => "",
+			"value" => "",
+			"low" => "",
+			"high" => "",
+			"optimum" => "",
+		),
+		$atts
+	);
 
-	$min_set = "";
-	$max_set = "";
-	$val_set = "";
-	$low_set = "";
-	$high_set = "";
-	$opt_set = "";
+	$min = (int) $args["min"];
+	$max = (int) $args["max"];
+	$value = (int) $args["value"];
+	$low = (int) $args["low"];
+	$high = (int) $args["high"];
+	$optimum = (int) $args["optimum"];
 
 	if(!empty($value)) {
 		$val_set = " value=\"{$value}\"";

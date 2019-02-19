@@ -5,14 +5,24 @@ add_shortcode( "blockquote", "rpc_tinymce_bquote_shortcode" );
 
 // ----- RENDER SHORTCODES -----
 function rpc_tinymce_bquote_shortcode( $atts, $content, $tag ) {
-	extract(shortcode_atts(array(
-    	"type" => "",
-    	"author" => "",
-    	"work" => "",
-    	"url" => "",
-    	"title" => "",
-    	"company" => ""
-	), $atts));
+	$args = shortcode_atts(
+		array(
+			"type" => "",
+	    	"author" => "",
+	    	"work" => "",
+	    	"url" => "",
+	    	"title" => "",
+	    	"company" => ""
+		),
+		$atts
+	);
+
+	$type = sanitize_text_field( $args["type"] );
+	$author = sanitize_text_field( $args["author"] );
+	$work = sanitize_text_field( $args["work"] );
+	$url = esc_url( $args["url"] );
+	$title = sanitize_text_field( $args["title"] );
+	$company = sanitize_text_field( $args["company"] );
 
 	$author_set = "";
 	$work_set = "";

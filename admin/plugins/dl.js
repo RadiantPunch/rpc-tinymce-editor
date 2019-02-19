@@ -30,23 +30,19 @@
         });
   
         // ----- BUTTON COMMANDS -----
-        var dlistStart = '<p class="scode no-edit first">[dlist]</p>';
-        var dlistEnd = '<p class="scode no-edit last">[/dlist]</p>';
+        var dlistStart = '[dlist]';
+        var dlistEnd = '[/dlist]';
 
-        var dtermStart = '<p class="br-only dterm"><span class="scode no-edit">[dterm]</span>';
-        var dtermEnd = '<span class="scode no-edit">[/dterm]</span></p>';
+        var dtermStart = '[dterm]';
+        var dtermEnd = '[/dterm]';
 
-        var ddescriptionStart = '<p class="br-only ddescription"><span class="scode no-edit">[ddescription]</span>';
-        var ddescriptionEnd = '<span class="scode no-edit">[/ddescription]</span></p>';
+        var ddescriptionStart = '[ddescription]';
+        var ddescriptionEnd = '[/ddescription]';
 
         var dterm = dtermStart + 'Term' + dtermEnd;
         var ddescription = ddescriptionStart + 'Description' + ddescriptionEnd;
 
         editor.addCommand('dlCmd', function(){
-            var currentNode = $(editor.selection.getNode());
-            if (currentNode.is('.dterm') || currentNode.is('.ddescription') || ( currentNode.is('p.scode') && currentNode.attr('data-mce-selected') ) ) {
-                return;
-            }
             var returnText = dlistStart + dterm + ddescription + dlistEnd;
             editor.insertContent(returnText);
         });

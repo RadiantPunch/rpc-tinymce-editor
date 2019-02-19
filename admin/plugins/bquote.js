@@ -180,9 +180,6 @@
                             
                             var validURL = 0;
 
-                            var editOpen = '<span class="edit">';
-                            var editClose = '</span>';
-
                             if ( type == 'regular' ) {
                                 author = e.data.bquoteRegAuthor;
                                 workInput = e.data.bquoteRegWork;
@@ -198,7 +195,7 @@
 
                                 if ( urlInput.length > 0 ) {
                                     if ( isValidURL(urlInput) === true ) {
-                                        url = ' url="' + editOpen + urlInput + editClose + '"';
+                                        url = ' url="' + urlInput + '"';
                                         validURL = 1;
                                     } else {
                                         winManager.alert('The URL you entered is invalid. Leave the field blank or input a full URL (example: http://example.com).');
@@ -212,7 +209,7 @@
                                 if (type == 'regular') {
 
                                     if ( workInput.length > 0 ) {
-                                        work = ' work="' + editOpen + workInput + editClose + '"';
+                                        work = ' work="' + workInput + '"';
                                     }
 
                                 } else {
@@ -220,11 +217,11 @@
                                     if ( titleInput.length > 0 || companyInput.length > 0 ) {
 
                                         if ( titleInput.length > 0 ) {
-                                            title = ' title="' + editOpen + titleInput + editClose + '"';
+                                            title = ' title="' + titleInput + '"';
                                         }
 
                                         if ( companyInput.length > 0 ) {
-                                            company = ' company="' + editOpen + companyInput + editClose + '"';
+                                            company = ' company="' + companyInput + '"';
                                         }
 
                                     } else {
@@ -236,14 +233,9 @@
 
                                 if ( validURL == 1 ) {
                                     type = ' type="' + type + '"';
-                                    author = ' author="' + editOpen + author + editClose + '"';
+                                    author = ' author="' + author + '"';
 
-                                    var firstCodeStart = '<p class="scode no-edit no-return first">';
-                                    var firstCodeEnd = '</p>';
-                                    var secondCodeStart = '<p class="scode no-edit last">';
-                                    var secondCodeEnd = '</p>';
-
-                                    returnText = firstCodeStart + '[blockquote' + type + author + work + title + company + url + ']' + firstCodeEnd + '<p>' + quote + '</p>' + secondCodeStart + '[/blockquote]' + secondCodeEnd;
+                                    returnText = '[blockquote' + type + author + work + title + company + url + ']' + '<p>' + quote + '</p>' + '[/blockquote]';
                                     editor.insertContent(returnText);
                                     return;
                                 }

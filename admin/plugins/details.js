@@ -51,13 +51,7 @@
                     var content = '<p>' + e.data.detailsContent + '</p>';
                     if ( (summary.length > 0) && (content.length > 0) ) {
 
-                        var detailsStart = '<p class="scode no-edit first">[details]</p>';
-                        var detailsEnd = '<p class="scode no-edit last">[/details]</p>';
-
-                        var summaryStart = '<p class="br-only dsummary"><span class="scode no-edit">[dsummary]</span>';
-                        var summaryEnd = '<span class="scode no-edit">[/dsummary]</span></p>';
-
-                        var returnText = detailsStart + summaryStart + summary + summaryEnd + content + detailsEnd;
+                        var returnText = '[details]' + '[dsummary]' + summary + '[/dsummary]' + content + '[/details]';
                         editor.insertContent(returnText);
                         return;
                     } else {
